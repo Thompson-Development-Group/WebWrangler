@@ -1,0 +1,9 @@
+version: 1
+jobs:
+  main:
+    steps:
+      - goto: 
+          flag: url
+      - pdf:
+          as: file
+          format: A4
