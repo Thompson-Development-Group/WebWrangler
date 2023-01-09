@@ -1,8 +1,7 @@
-const fs = require('fs')
-const path = require('path')
-const yaml = require('yaml')
-
-const fatal = require('./err').fatal
+import fs from 'fs';
+import path from 'path';
+import yaml from 'yaml';
+import err from './err.js';
 
 /**
  * Return the yaml parsed for a given string
@@ -11,8 +10,6 @@ const fatal = require('./err').fatal
  */
 const loadString = async (str) =>
   yaml.parse(str)
-
-module.exports.loadString = loadString
 
 /**
  * Return the yaml parsed for a given file's contents
@@ -27,20 +24,16 @@ const loadFile = async (file) => {
   return loadString(defRaw)
 }
 
-module.exports.loadFile = loadFile
-
 /**
  * Validate a yaml definition
  * 
  * @param {object} def The parsed yaml definition
  */
 const validate = async (def) => {
-  if (!def.jobs) fatal('No jobs found')
-  if (!def.jobs.main) fatal('No main job found')
-  if (!def.jobs.main.steps) fatal('No main job found')
+  if (!def.jobs) err.fatal('No jobs found')
+  if (!def.jobs.main) err.fatal('No main job found')
+  if (!def.jobs.main.steps) err.fatal('No main job found')
 }
-
-module.exports.validate = validate
 
 /**
  * Returns a key's value from a job.
@@ -57,4 +50,4 @@ const cfg = (def, jobName, key, value) => {
     def.jobs[jobName]
 }
 
-module.exports.cfg = cfg
+export default {loadString, loadFile, validate, cfg}

@@ -1,19 +1,38 @@
-module.exports.goBack = require('./goBack')
-module.exports.goto = require('./goto')
-module.exports.html = require('./html')
-module.exports.pdf = require('./pdf')
-module.exports.screenshot = require('./screenshot')
-module.exports.title = require('./title')
-module.exports.property = require('./property')
-module.exports.text = require('./text')
-module.exports.form = require('./form')
-module.exports.waitFor = require('./waitFor')
-module.exports.click = require('./click')
-module.exports.url = require('./url')
-module.exports.many = require('./many')
-module.exports.keyboardPress = require('./keyboardPress')
-module.exports.type = require('./type')
-module.exports.waitForNavigation = require('./waitForNavigation')
-module.exports.setContent = require('./setContent')
-module.exports.scrollTo = require('./scrollTo')
-module.exports.scrollToEnd = require('./scrollToEnd')
+import {goBack} from './goBack.js';
+import {html} from './html.js';
+import {pdf} from './pdf.js';
+import {goto} from './goto.js';
+import {screenshot} from './screenshot.js';
+import {title} from './title.js';
+import {property} from './property.js';
+import {text} from './text.js';
+import {form} from './form.js';
+import {waitFor} from './waitFor.js';
+import {click} from './click.js';
+import {url} from './url.js';
+import {many} from './many.js';
+import {keyboardPress} from './keyboardPress.js';
+import {setContent} from './setContent.js';
+import {scrollTo} from './scrollTo.js';
+import {scrollToEnd} from './scrollToEnd.js';
+import {type} from './type.js';
+import {waitForNavigation} from './waitForNavigation.js';
+
+export default { goBack, goto,
+html,
+pdf,
+screenshot,
+title,
+property,
+text,
+form,
+waitFor,
+click,
+url,
+many,
+keyboardPress,
+type,
+waitForNavigation,
+setContent,
+scrollTo,
+scrollToEnd}

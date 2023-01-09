@@ -10,11 +10,9 @@
     }
   }
   
-  module.exports.error = error
-  
   /**
    * @param {object} err
    */
   const fatal = (err) => error(err, true)
   
-  module.exports.fatal = fatal
+  export default {error, fatal};

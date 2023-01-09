@@ -1,4 +1,4 @@
-const schema = {
+const type = {
     method: 'type',
     process: async (flags, page, params, html, usingPuppeteer) => {
       const { selector, text, options } = params
@@ -7,4 +7,4 @@ const schema = {
     }
   }
   
-  module.exports = schema
+  export {type};

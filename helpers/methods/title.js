@@ -1,9 +1,9 @@
-const parser = require('../parser')
+import parser from '../parser.js';
 
-const schema = {
+const title = {
   method: 'title',
   puppeteer: true,
   output: (flags, raw, params, url) => parser.outputVal(raw, params, 'title', url)
 }
 
-module.exports = schema
+export {title};

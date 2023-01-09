@@ -42,9 +42,7 @@
         break;
     }
   }
-  
-  module.exports.cast = cast
-  
+    
   /**
    * Transforms a value 
    * 
@@ -78,9 +76,7 @@
         break;
     }
   }
-  
-  module.exports.transform = transform
-  
+    
   /**
    * 
    * @param {*} value 
@@ -97,4 +93,4 @@
     return result
   }
   
-  module.exports.outputVal = outputVal
+  export default {cast, transform, outputVal}

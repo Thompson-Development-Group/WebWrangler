@@ -1,57 +1,57 @@
 {
-    "name": "webwrangler",
-    "version": "1.0.0",
-    "description": "WebWrangler is a NodeJS library which allows to scrape and interact with websites using Puppeteer with YAML",
-    "main": "index.js",
-    "keywords": [
-      "cli-app",
-      "cli",
-      "web",
-      "puppeteer",
-      "cheerio",
-      "scraper",
-      "scraping",
-      "chrome",
-      "web scraping",
-      "web scraper"
-    ],
-    "scripts": {
-      "test": "mocha --exit"
-    },
-    "bin": {
-      "webwrangler": "cli.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Thompson-Development-Group/webwrangler.git"
-    },
-    "author": {
-      "name": "Tyler Thompson",
-      "url": "https://www.thompsondevgroup.com"
-    },
-    "engines": {
-      "node": ">=8"
-    },
-    "license": "MIT",
-    "homepage": "https://github.com/Thompson-Development-Group/webwrangler",
-    "dependencies": {
-      "cheerio": "1.0.0-rc.12",
-      "debug": "4.3.4",
-      "got": "12.5.3",
-      "puppeteer": "19.4.1",
-      "puppeteer-core": "19.4.1",
-      "yaml": "2.2.0"
-    },
-    "devDependencies": {
-      "chai": "4.3.7",
-      "create-test-server": "3.0.1",
-      "mocha": "10.2.0"
-    },
-    "bugs": {
-      "url": "https://github.com/Thompson-Development-Group/webwrangler/issues"
-    },
-    "directories": {
-      "test": "test"
-    }
+  "name": "webwrangler",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "WebWrangler is a NodeJS library which allows to scrape and interact with websites using Puppeteer with YAML",
+  "main": "index.js",
+  "keywords": [
+    "cli-app",
+    "cli",
+    "web",
+    "puppeteer",
+    "cheerio",
+    "scraper",
+    "scraping",
+    "chrome",
+    "web scraping",
+    "web scraper"
+  ],
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "bin": {
+    "webwrangler": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thompson-Development-Group/webwrangler.git"
+  },
+  "author": {
+    "name": "Tyler Thompson",
+    "url": "https://www.thompsondevgroup.com"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Thompson-Development-Group/webwrangler",
+  "dependencies": {
+    "cheerio": "1.0.0-rc.12",
+    "debug": "4.3.4",
+    "got": "12.5.3",
+    "puppeteer": "19.4.1",
+    "puppeteer-core": "19.4.1",
+    "yaml": "2.2.0"
+  },
+  "devDependencies": {
+    "chai": "4.3.7",
+    "create-test-server": "3.0.1",
+    "mocha": "^10.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Thompson-Development-Group/webwrangler/issues"
+  },
+  "directories": {
+    "test": "test"
   }
-  
+}

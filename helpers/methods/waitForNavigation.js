@@ -1,4 +1,4 @@
-const schema = {
+const waitForNavigation = {
     method: 'waitForNavigation',
     process: async (flags, page, params, html, usingPuppeteer) => {
       if (!usingPuppeteer) throw new Error(`form requires using puppeteer to browse pages`)
@@ -6,4 +6,4 @@ const schema = {
     }
   }
   
-  module.exports = schema
+  export {waitForNavigation};

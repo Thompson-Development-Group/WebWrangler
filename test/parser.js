@@ -1,6 +1,5 @@
-const expect = require('chai').expect
-
-const parser = require('../helpers/parser')
+import {expect} from 'chai';
+import parser from '../helpers/parser.js';
 
 describe('parser', function () {
   describe('cast', function () {

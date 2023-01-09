@@ -1,7 +1,7 @@
-const parser = require('../parser')
-const cheerio = require('../cheerio')
+import parser from '../parser.js';
+import cheerio from'../cheerio.js';
 
-const schema = {
+const pdf = {
   method: 'pdf',
   process: async (flags, page, params, html, usingPuppeteer) => {
     if (params.as) {
@@ -23,4 +23,4 @@ const schema = {
   }
 }
 
-module.exports = schema
+export {pdf};

@@ -1,8 +1,8 @@
-const schema = {
+const setContent = {
     method: 'setContent',
     process: (flags, page, params, html) => {
       return null
     }
   }
   
-  module.exports = schema
+  export {setContent};

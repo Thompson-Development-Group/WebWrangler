@@ -1,6 +1,6 @@
-const parser = require('../parser')
-const cheerio = require('../cheerio')
-const steps = require('../steps')
+import parser from '../parser.js';
+import cheerio from '../cheerio.js'
+import steps from '../steps.js';
 
 const runElement = async (flags, page, params, $, elem) => {
   let el = {}
@@ -17,7 +17,7 @@ const runElement = async (flags, page, params, $, elem) => {
   return el
 }
 
-const schema = {
+const many = {
   method: 'many',
   process: async (flags, page, params, html, usingPuppeteer) => {
     let $ = cheerio.load(html)
@@ -46,4 +46,4 @@ const schema = {
   output: (flags, raw, params, url) => parser.outputVal(raw, params, null, url)
 }
 
-module.exports = schema
+export {many};
