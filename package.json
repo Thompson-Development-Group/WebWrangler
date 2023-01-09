@@ -1,6 +1,6 @@
 {
     "name": "webwrangler",
-    "version": "0.8.4",
+    "version": "1.0.0",
     "description": "WebWrangler is a NodeJS library which allows to scrape and interact with websites using Puppeteer with YAML",
     "main": "index.js",
     "keywords": [
