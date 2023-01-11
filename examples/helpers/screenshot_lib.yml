@@ -1,0 +1,8 @@
+version: 1
+jobs:
+  main:
+    steps:
+      - goto: 
+          flag: url
+      - screenshot:
+          as: image

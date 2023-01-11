@@ -1,0 +1,12 @@
+version: 1
+jobs:
+  main:
+    steps:
+      - goto:
+          url: http://example.com
+          method: got
+      - html:
+          as: page_html
+      - html:
+          as: div_html
+          selector: div
