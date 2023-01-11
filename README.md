@@ -108,9 +108,9 @@ $ webwrangler example/_weather.yml --customFlag "custom flag value"
 Result:
 
 {
-  "title": "Madrid, España Pronóstico del tiempo y condiciones meteorológicas - The Weather Channel | Weather.com",
-  "city": "Madrid, España",
-  "temp": 18
+  "title": "Evansville, WI Weather Forecast and Conditions - The Weather Channel | Weather.com",
+  "city": "Evansville, WI",
+  "temp": 45
 }
 ```
 

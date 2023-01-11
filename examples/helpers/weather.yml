@@ -2,7 +2,7 @@ version: 1
 jobs:
   main:
     steps:
-      - goto: https://weather.com/es-ES/tiempo/hoy/l/SPXX0050:1:SP
+      - goto: https://weather.com/weather/today/l/2180f6103515df172f8e1ed296888bca1178ad1ef792142fb89556f2a1395ba2
       - title
       - text:
           selector: .h4.today_nowcard-location
