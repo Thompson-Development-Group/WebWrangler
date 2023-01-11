@@ -4,7 +4,7 @@ jobs:
     browser:
       headless: false
     steps:
-      - goto: http://elpais.com
+      - goto: https://news.ycombinator.com/
       - scrollToEnd:
           step: 300
           sleep: 1000
