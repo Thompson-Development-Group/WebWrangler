@@ -1,68 +1,11 @@
-# WebWrangler
-
-![webwrangler.png](/assets/webwrangler.png)
+![webwrangler.png](/assets/banner.png)
 
 Web Wrangler is a powerful tool that helps you extract and organize data from the web. With Web Wrangler, you can easily scrape websites, extract specific data points, and turn unstructured information into structured data sets. Whether you're looking to gather data for research, analysis, or any other purpose, Web Wrangler has you covered. Its intuitive interface and customizable features make it a breeze to use, and it's fast and reliable, so you can get the data you need quickly and accurately. So if you're tired of manually sifting through web pages, let Web Wrangler do the heavy lifting for you. Try it out today and see how it can revolutionize your web data-gathering process.
 
-```yaml
-version: 1
-jobs:
-  main:
-    steps:
-      - goto: https://github.com/marketplace?category=code-quality
-      - pdf:
-          path: Github_Tools.pdf
-          format: A4
-      - many: 
-          as: github_tools
-          event: githubTool
-          selector: main .col-lg-9.mt-1.mb-4.float-lg-right a.col-md-6.mb-4.d-flex.no-underline
-          element:
-            - property:
-                selector: a
-                type: string
-                property: href
-                as: url
-                transform: absoluteUrl
-            - text:
-                selector: h3.h4
-                type: string
-                transform: trim
-                as: name
-            - text:
-                selector: p
-                type: string
-                transform: trim
-                as: description
-```
-
-_Return an array with Github's tools, and creates a PDF. Example output:_
-
-```json
-{
-  "github_tools": [
-    {
-      "url": "https://github.com/marketplace/codelingo",
-      "name": "codelingo",
-      "description": "Your Code, Your Rules - Automate code reviews with your own best practices"
-    },
-    {
-      "url": "https://github.com/marketplace/codebeat",
-      "name": "codebeat",
-      "description": "Code review expert on demand. Automated for mobile and web"
-    },
-    ...
-  ]
-}
-```
-
----
-
-Don't panic. There are examples for all WebWrangler features in the examples folder. This is as basic as possible to help you get started.
-
-
-
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+
+
+> There are examples for all WebWrangler features in the examples folder.
 
 ##### Table of Contents
 
@@ -104,7 +47,7 @@ $ npm i webwrangler -g
 ```
 
 ```bash
-$ webwrangler example/_weather.yml --customFlag "custom flag value"
+$ webwrangler example/weather.yml --customFlag "custom flag value"
 Result:
 
 {
@@ -129,7 +72,7 @@ const parsingResult = await webwrangler.init({
 ##### init(options)
 
 options:
-One of YAML, `file`` or `string` is required.
+One of YAML, `file` or `string` is required.
 
 - `yaml`: A [YAML npm module](https://www.npmjs.com/package/yaml) instance of the scraping definition.
 `string` The YAML definition is a plain string.
@@ -286,7 +229,7 @@ direct HTTP request via got. This will perform much faster, but it may not be
 suitable for websites that require JavaScript. [simple example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/getRequest.yml) / 
 [extended example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/many_using_get.yml)
 
-Note that some methods (for example: `form`, `click` and others) will not be
+> Note that some methods (for example: `form`, `click` and others) will not be
 available if you are not browsing using puppeteer.
 
 ```yaml
