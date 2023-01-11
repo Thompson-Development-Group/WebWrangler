@@ -1,6 +1,6 @@
 # WebWrangler
 
-![webwrangler.png](/assets/webwrangler.png);
+![webwrangler.png](/assets/webwrangler.png)
 
 Web Wrangler is a powerful tool that helps you extract and organize data from the web. With Web Wrangler, you can easily scrape websites, extract specific data points, and turn unstructured information into structured data sets. Whether you're looking to gather data for research, analysis, or any other purpose, Web Wrangler has you covered. Its intuitive interface and customizable features make it a breeze to use, and it's fast and reliable, so you can get the data you need quickly and accurately. So if you're tired of manually sifting through web pages, let Web Wrangler do the heavy lifting for you. Try it out today and see how it can revolutionize your web data-gathering process.
 
