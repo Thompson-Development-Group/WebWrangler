@@ -4,6 +4,11 @@
   "type": "module",
   "description": "WebWrangler is a NodeJS library which allows to scrape and interact with websites using Puppeteer with YAML",
   "main": "index.js",
+  "author": {
+    "name": "Tyler Thompson",
+    "email": "tyler@tylerthompson.me",
+    "url": "https://github.com/TylerThompson"
+  },
   "keywords": [
     "cli-app",
     "cli",
@@ -17,7 +22,10 @@
     "web scraper"
   ],
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags"
   },
   "bin": {
     "webwrangler": "cli.js"
@@ -26,12 +34,8 @@
     "type": "git",
     "url": "git+https://github.com/Thompson-Development-Group/webwrangler.git"
   },
-  "author": {
-    "name": "Tyler Thompson",
-    "url": "https://www.thompsondevgroup.com"
-  },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "license": "MIT",
   "homepage": "https://github.com/Thompson-Development-Group/webwrangler",
