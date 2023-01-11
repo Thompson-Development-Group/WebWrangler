@@ -128,7 +128,7 @@ text:
 ## Transform
 
 When you extract texts from a web page, you might want to transform the data
-before returning them. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/transform.yml)
+before returning them. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/transform.yml)
 
 You can use the following `- transform` methods:
 
@@ -140,7 +140,7 @@ You can use the following `- transform` methods:
 
 When extracting details from a page, you might want them to be returned in
 different formats, for example as a number in the example of grabbing temperatures.
-[example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/type.yml)
+[example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/type.yml)
 
 You can use the following values for `- type`:
 
@@ -218,7 +218,7 @@ Loading the HTML from a flag:
 
 ## goto
 
-URL to navigate the page. The URL should include a scheme (e.g. https://). [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/goBack.yml)
+URL to navigate the page. The URL should include a scheme (e.g. https://). [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/goBack.yml)
 
 ```yaml
 - goto: https://example.com
@@ -226,8 +226,8 @@ URL to navigate the page. The URL should include a scheme (e.g. https://). [exam
 
 You can also tell WebWrangler to don't use Puppeteer to browse, and instead do a
 direct HTTP request via got. This will perform much faster, but it may not be
-suitable for websites that require JavaScript. [simple example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/getRequest.yml) / 
-[extended example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/many_using_get.yml)
+suitable for websites that require JavaScript. [simple example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/getRequest.yml) / 
+[extended example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/many_using_get.yml)
 
 > Note that some methods (for example: `form`, `click` and others) will not be
 available if you are not browsing using puppeteer.
@@ -287,7 +287,7 @@ Runs a group of steps by its name.
 
 ## goBack
 
-Navigate to the previous page in history. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/goBack.yml)
+Navigate to the previous page in history. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/goBack.yml)
 
 ```yaml
 - goBack
@@ -295,7 +295,7 @@ Navigate to the previous page in history. [example](https://github.com/Thompson-
 
 ## screenshot
 Takes a screenshot of the page. This triggers the puppeteer's [page screenshot](https://github.com/GoogleChrome/puppeteer/blob/v1.13.0/docs/api.md#pagescreenshotoptions).
-[example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/screenshot.yml)
+[example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/screenshot.yml)
 
 ```yaml
 - screenshot:
@@ -330,7 +330,7 @@ returned as a Buffer by using them `as` a property.
 ## title
 
 Gets the title for the current page. If no output. as property is defined, the
-page's title will the returned as `{ title }`. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/goBack.yml)
+page's title will the returned as `{ title }`. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/goBack.yml)
 
 ```yaml
 - title
@@ -338,7 +338,7 @@ page's title will the returned as `{ title }`. [example](https://github.com/Thom
 
 ## many
 
-Returns an array of elements given their CSS selectors. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/many.yml)
+Returns an array of elements given their CSS selectors. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/many.yml)
 
 Example: 
 
@@ -368,7 +368,7 @@ stored in memory, set `eventMethod` to `discard`.
 [Example using events](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/many_event.js)
 
 ## form
-Fill out and submit forms. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/form.yml)
+Fill out and submit forms. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/form.yml)
 
 Example: 
 
@@ -399,7 +399,7 @@ Using environment variables
 
 Gets the HTML code. If no `selector` is specified, it returns the page's full HTML
 code. If no output. as the property is defined, the result will be returned
-as `{`HTML`}`. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/html.yml)
+as `{`HTML`}`. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/html.yml)
 
 Example: 
 
@@ -411,7 +411,7 @@ Example:
 
 ## click
 
-Click on an element. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/click.yml)
+Click on an element. [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/click.yml)
 
 Example:
 The default behavior (CSS selector)
@@ -460,7 +460,7 @@ Example:
 ## waitFor
 
 Wait for specified CSS, and XPath selectors, on a specific amount of time before
-continuing [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/form.yml)
+continuing [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/form.yml)
 
 Examples: 
 
@@ -495,7 +495,7 @@ Simulates the press of a keyboard key. [extended docs](https://github.com/puppet
 
 ## scrollTo
 
-Scroll to specified CSS, XPath selectors, to bottom/top or specified x/y value before continuing [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/scrollTo.yml)
+Scroll to specified CSS, XPath selectors, to bottom/top or specified x/y value before continuing [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/scrollTo.yml)
 
 Examples: 
 
@@ -531,7 +531,7 @@ Examples:
 
 ## scrollToEnd
 
-Scroll's to the very bottom (infinite scroll pages) [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/methods/scrollToEnd.yml)
+Scroll's to the very bottom (infinite scroll pages) [example](https://github.com/Thompson-Development-Group/webwrangler/blob/master/examples/helpers/scrollToEnd.yml)
 
 This accepts three settings:
 - **step:** how many pixels to scroll every time? The default is 10.
