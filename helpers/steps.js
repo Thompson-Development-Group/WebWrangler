@@ -1,9 +1,10 @@
-import debug from 'debug';
+const debug = require('debug')('webwrangler:steps')
 
-import fs from 'fs';
-import got from'got';
-import err from'./err.js';
-import methods from './methods/index.js';
+const fs = require('fs')
+const got = require('got')
+
+const error = require('./err').error
+let methods = require('./methods')
 
 /**
  * Given an step details, return webwrangler's method name.
@@ -125,7 +126,7 @@ const exec = async (flags, step, page, html) => {
   const usedMethod = methods[methodName]
 
   if (!usedMethod) {
-    err.error(`Step method ${methodName} not supported`, true, 5)
+    error(`Step method ${methodName} not supported`, true, 5)
   }
 
   debug(`Method ${JSON.stringify(usedMethod)}`)
@@ -147,4 +148,4 @@ const exec = async (flags, step, page, html) => {
   return { raw, result }
 }
 
-export default {exec};
+module.exports.exec = exec

@@ -1,4 +1,4 @@
-const scrollToEnd = {
+const schema = {
     method: 'scrollToEnd',
     process: async (flags, page, params, html, usingPuppeteer) => {
       if (!usingPuppeteer) throw new Error(`scrollToEnd requires using puppeteer to browse pages`)
@@ -24,4 +24,4 @@ const scrollToEnd = {
     }
   }
   
-  export {scrollToEnd};
+  module.exports = schema;

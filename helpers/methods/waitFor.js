@@ -1,6 +1,6 @@
-import parser from '../parser.js';
+const parser = require('../parser');
 
-const waitFor = {
+const schema = {
   method: 'waitFor',
   process: async (flags, page, params, html, usingPuppeteer) => {
     if (!usingPuppeteer) throw new Error(`form requires using puppeteer to browse pages`)
@@ -23,4 +23,4 @@ const waitFor = {
   }
 }
 
-export {waitFor};
+module.exports = schema;

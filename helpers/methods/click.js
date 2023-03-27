@@ -1,4 +1,4 @@
-const click = {
+const schema = {
     method: 'click',
     process: async (flags, page, params, html, usingPuppeteer) => {
       if (params.selector) {
@@ -19,4 +19,4 @@ const click = {
     }
   }
   
-  export {click};
+  module.exports = schema;

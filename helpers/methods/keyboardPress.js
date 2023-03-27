@@ -1,4 +1,4 @@
-const keyboardPress = {
+const schema = {
     method: 'keyboardPress',
     process: async (flags, page, params, html) => {
       const { key, options } = params
@@ -7,4 +7,4 @@ const keyboardPress = {
     }
   }
   
-  export {keyboardPress};
+  module.exports = schema;

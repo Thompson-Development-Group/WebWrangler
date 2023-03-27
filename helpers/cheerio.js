@@ -1,14 +1,16 @@
-import cheerio from 'cheerio'
+const cheerio = require('cheerio')
 
-let load = (html) => {
+const load = (html) => {
   return typeof html === 'string' ? cheerio.load(html) : html
 }
 
-let text = (html, selector) => typeof (html === 'string') ?
+module.exports.load = load
+
+module.exports.text = (html, selector) => typeof (html === 'string') ?
     load(html)(selector || null).text() :
     cheerio(selector || null).text()
 
-let html = (html, selector) => {
+module.exports.html = (html, selector) => {
   // Get full page html
   if (!selector && typeof html === 'string') return html
 
@@ -17,5 +19,3 @@ let html = (html, selector) => {
   load(html)(selector || null).html() :
   cheerio(selector || null).html()
 }
-
-export default { load, text, html};

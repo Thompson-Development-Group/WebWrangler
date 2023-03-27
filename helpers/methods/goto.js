@@ -1,8 +1,8 @@
-const goto = {
+const schema = {
     method: 'goto',
     process: (flags, page, params, html) => {
       return null
     }
   }
   
-  export {goto};
+  module.exports = schema;

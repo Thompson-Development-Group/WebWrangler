@@ -1,4 +1,4 @@
-const form = {
+const schema = {
     method: 'form',
     process: async (flags, page, params, html, usingPuppeteer) => {
       if (!usingPuppeteer) throw new Error(`form requires using puppeteer to browse pages`)
@@ -23,4 +23,4 @@ const form = {
     }
   }
   
-  export {form};
+  module.exports = schema;
