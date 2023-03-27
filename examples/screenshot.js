@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * This example shows how how to input an url from NodeJS into webwrangler
  */

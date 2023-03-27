@@ -1,6 +1,6 @@
-const goBack = {
+const schema = {
     method: 'goBack',
     puppeteer: true
   }
   
-  export {goBack};
+  module.exports = schema;

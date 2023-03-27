@@ -1,4 +1,4 @@
-const WebWrangler = require('../')
+const WebWrangler = require('../');
 
 process.on('github_tool', (tool) => {
   // Each Github tool is passed to the event.
